@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self Assessment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .answers {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -5px;
+    }
+    .answer {
+      flex: 0 0 50%;
+      padding: 5px;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Self Assessment</h1>
+  <div class="question">
+    <p>1. What distinguishes multi-class polypharmacy from same-class polypharmacy?</p>
+    <div class="answers">
+      <div class="answer">
+        <input type="radio" name="q1" value="A">
+        <label>A) Same medication from different classes</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q1" value="B">
+        <label>B) Different medications from the same class</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q1" value="C">
+        <label>C) Both involve identical medications</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q1" value="D">
+        <label>D) They have no difference</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>2. Which factor is NOT typically associated with the causes of polypharmacy?</p>
+    <div class="answers">
+      <div class="answer">
+        <input type="radio" name="q2" value="A">
+        <label>A) Age</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q2" value="B">
+        <label>B) Healthcare visits</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q2" value="C">
+        <label>C) Borrowing medications</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q2" value="D">
+        <label>D) Gender</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>3. True or False: Cognitive impairment is not a consequence of polypharmacy.</p>
+    <div class="answers">
+      <div class="answer">
+        <input type="radio" name="q3" value="A">
+        <label>A) True</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q3" value="B">
+        <label>B) False</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>4. Which strategy is NOT recommended for managing polypharmacy?</p>
+    <div class="answers">
+      <div class="answer">
+        <input type="radio" name="q4" value="A">
+        <label>A) Patient education</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q4" value="B">
+        <label>B) Simplifying regimens</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q4" value="C">
+        <label>C) Increasing the number of medications</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q4" value="D">
+        <label>D) Deprescribing when applicable</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>5. Which medication class is commonly used as an anti-diabetic?</p>
+    <div class="answers">
+      <div class="answer">
+        <input type="radio" name="q5" value="A">
+        <label>A) Anti-hypertensive</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q5" value="B">
+        <label>B) Analgesics</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q5" value="C">
+        <label>C) Statins</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q5" value="D">
+        <label>D) PPIs</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>6. What is the role of healthcare providers in managing polypharmacy?</p>
+    <div class="answers">
+      <div class="answer">
+        <input type="radio" name="q6" value="A">
+        <label>A) Prescribe more medications</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q6" value="B">
+        <label>B) Monitor for drug interactions</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q6" value="C">
+        <label>C) Encourage medication non-adherence</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q6" value="D">
+        <label>D) Avoid coordination with other providers</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>7. True or False: Periodically reviewing medications and deprescribing those no longer needed is part of the role of healthcare providers.</p>
+    <div class="answers">
+      <div class="answer">
+        <input type="radio" name="q7" value="A">
+        <label>A) True</label>
+      </div>
+      <div class="answer">
+        <input type="radio" name="q7" value="B">
+        <label>B) False</label>
+      </div>
+    </div>
+  </div>
+
+  <button id="submit">Submit Answers</button>
+  <div id="result"></div>
+</div>
+
+<script>
+  document.getElementById('submit').addEventListener('click', function() {
+    // Retrieving selected answers
+    const answers = document.querySelectorAll('input[type="radio"]:checked');
+    const userAnswers = Array.from(answers).map(answer => answer.value);
+
+    // Correct answers
+    const correctAnswers = ['B', 'D', 'B', 'C', 'C', 'B', 'A'];
+
+    // Checking answers
+    let score = 0;
+    for (let i = 0; i < correctAnswers.length; i++) {
+      if (userAnswers[i] === correctAnswers[i]) {
+        score++;
+      }
+    }
+
+    // Displaying result
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `<h2>Your Score: ${score}/${correctAnswers.length}</h2>`;
+  });
+</script>
+</body>
+</html>
